@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: 'postgres:17'
+    environment:
+      - 'POSTGRES_DB=postgres'
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=postgres'
+    ports:
+      - '5432'
+
+  url-shortener:
+    image: prudhvim333/url-shortener
+    container_name: url-shortener
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SERVER_PORT: 8109
+    ports :
+        - '8109:8109'
+    restart: unless-stopped
+    depends_on:
+      - postgres

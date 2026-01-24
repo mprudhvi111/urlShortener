@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Short URL expired</title>
+</head>
+<body>
+    <div layout:fragment="content">
+    <h1 bgcolor="red">Expired Short URL</h1>
+    <p>The short URL you are trying to access has expired. ${shortKey}</p>
+</body>
+</html>

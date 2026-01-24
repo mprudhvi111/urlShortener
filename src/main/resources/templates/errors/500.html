@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Error 500</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="jumbotron bg-light p-5 rounded-3 my-4 text-center">
+        <h1 class="display-4">500 - Internal Server Error</h1>
+        <p class="lead">Something went wrong on our end. Please try again later.</p>
+        <hr class="my-4">
+        <a class="btn btn-primary" th:href="@{/}">Go Home</a>
+    </div>
+</div>
+</body>
+</html>
